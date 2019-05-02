@@ -21,6 +21,13 @@ public class MainController {
         return orderRepository.findAll();
     }
 
+    @PostMapping("/order")
+    public @ResponseBody DeliveryOrder addOrder(
+        @RequestBody DeliveryOrder order
+    ){
+        return orderRepository.save(order);
+    }
+
     @RequestMapping(method = RequestMethod.GET, path = "/courier/{id}")
     public @ResponseBody Courier getCourier(@PathVariable Integer id){
         return courierRepository.findById(id).get();

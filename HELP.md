@@ -18,6 +18,8 @@ The following guides illustrate how to use some features concretely:
 2. run /delivery/scripts/init_data.sql
 3. mvn install
 4. run main of DeliveryApplication.java
+* this maven project is configure to run on java 11   
+one should point JAVA_HOME to jdk 11 to be able to run any maven goal
 
 ### Provided APIs
 * /delivery/orders  

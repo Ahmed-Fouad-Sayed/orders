@@ -6,7 +6,6 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface OrderRepository extends CrudRepository<DeliveryOrder, Integer> {
+public interface OrderRepository extends CrudRepository<DeliveryOrder, Integer>, OrderRepositoryCustom {
 
-    List<DeliveryOrder> findByCourierWithin500 (@Param("courier_id") Integer id);
 }

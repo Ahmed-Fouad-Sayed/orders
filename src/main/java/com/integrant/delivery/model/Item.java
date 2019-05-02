@@ -6,19 +6,18 @@ import javax.persistence.*;
 public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Long id;
     private String name;
     private String description;
-    private boolean isFood;
-    private double price;
+    private Double price;
 //    @ManyToOne
 //    private DeliveryOrder order;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -38,27 +37,11 @@ public class Item {
         this.description = description;
     }
 
-    public boolean isFood() {
-        return isFood;
-    }
-
-    public void setFood(boolean food) {
-        isFood = food;
-    }
-
-    public double getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
-//
-//    public DeliveryOrder getOrderId() {
-//        return order;
-//    }
-//
-//    public void setOrderId(DeliveryOrder orderId) {
-//        this.order = orderId;
-//    }
 }

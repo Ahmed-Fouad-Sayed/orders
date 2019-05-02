@@ -6,18 +6,18 @@ import javax.persistence.*;
 public class Courier {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Long id;
     private String name;
     private String vehicle;
-    private boolean hasBox;
-    private double longitude;
-    private double latitude;
+    private Boolean hasBox;
+    private Double longitude;
+    private Double latitude;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -37,27 +37,27 @@ public class Courier {
         this.vehicle = vehicle;
     }
 
-    public boolean isHasBox() {
+    public Boolean getHasBox() {
         return hasBox;
     }
 
-    public void setHasBox(boolean hasBox) {
+    public void setHasBox(Boolean hasBox) {
         this.hasBox = hasBox;
     }
 
-    public double getLongitude() {
+    public Double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(double longitude) {
+    public void setLongitude(Double longitude) {
         this.longitude = longitude;
     }
 
-    public double getLatitude() {
+    public Double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(double latitude) {
+    public void setLatitude(Double latitude) {
         this.latitude = latitude;
     }
 }
